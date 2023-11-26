@@ -19,6 +19,9 @@ Moreover, we are developing a feature that will enable mapping addresses to cell
 
 Starter kit to build with Create React App and thirdweb without additional initial configuration.
 
+# Links
+https://sweet.on.fleek.co/
+
 ## Installation
 
 Install the template with [thirdweb create](https://portal.thirdweb.com/cli/create)
