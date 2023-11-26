@@ -10,7 +10,8 @@ To further enhance the user experience, Cento has a rewards program in place. By
 
 Furthermore, Cento provides staking and liquidity provision options for individuals who wish to contribute to the security and stability of the protocol while earning additional income for themselves.
 
-Looking ahead, our future plans involve connecting a USSD feature to cater to the needs of individuals in the African market who utilize feature phones. This feature will ensure accessibility and inclusivity.
+# Looking ahead
+Our future plans involve connecting a USSD feature to cater to the needs of individuals in the African market who utilize feature phones. This feature will ensure accessibility and inclusivity.
 
 Additionally, we are actively working on adding full functionality to Cento, ensuring that all aspects of the platform operate smoothly and effectively.
 
