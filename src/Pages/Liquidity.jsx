@@ -10,15 +10,15 @@ function Liquidity() {
       <CurrentAmount />
       <div className="flex w-full justify-center gap-4">
         <Link
-          to="/Invest"
-          className="card max-w-full items-center justify-center m-3"
+          to="/Invest" 
+          className="card max-w-full items-center justify-center m-3 bg-gray-950 text-white"
         >
           Add Liquidity
         </Link>
         <div className="divider divider-vertical mx-0 h-44"></div>
         <Link
           to="/Invest"
-          className="card max-w-full items-center justify-center m-3"
+          className="card max-w-full items-center justify-center m-3 bg-gray-950 text-white"
         >
           Remove Liquidity
         </Link>
