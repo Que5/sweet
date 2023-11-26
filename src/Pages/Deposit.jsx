@@ -2,16 +2,19 @@ import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
 import CurrentAmount from "../Components/CurrentAmount";
 import { useContract, useContractWrite } from "@thirdweb-dev/react";
+import { walletUser } from "..";
+import { ethers } from 'ethers';
 
 function Deposit() {
   const [zarAmount, setZarAmount] = useState(0);
-  const [user, setUser] = useState("");
-  const { contract } = useContract("0xEd1CD02Dc4782482c30c59392596151bDFFE904b");
-  const { mutateAsync: depositAndMint, isLoading } = useContractWrite(contract, "depositAndMint")
+
+  const { contract } = useContract("0xf4386b25Ef558A7EF39961B0C9d558D6eF6BB94F");
+  const { mutateAsync: approve, isLoading } = useContractWrite(contract, "mint")
 
   const call = async () => {
+    const multiply = ethers.utils.parseUnits(zarAmount.toString(), 18);
     try {
-      const data = await depositAndMint({ args: [user, zarAmount] });
+      const data = await approve({ args: [walletUser, multiply] });
       console.info("contract call successs", data);
     } catch (err) {
       console.error("contract call failure", err);

@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useContract, useContractRead } from "@thirdweb-dev/react";
+import { walletUser } from "..";
 
 function CurrentAmount() {
-  const [data, setData] = useState(0);
-  const { contract } = useContract("0xEd1CD02Dc4782482c30c59392596151bDFFE904b");
-  const { data: contractData, isLoading } = useContractRead(contract, "cZARReserve", []);
 
+  const [data, setData] = useState(0);
+  const { contract } = useContract("0xf4386b25Ef558A7EF39961B0C9d558D6eF6BB94F");
+  const { data: contractData, isLoading } = useContractRead(contract, "balanceOf", [walletUser]);
+
+  const display = (data / 1000000000000000000).toFixed(2);
   useEffect(() => {
     // Update the state with the contract data when it's available
     if (!isLoading && contractData) {
@@ -21,7 +24,7 @@ function CurrentAmount() {
       <div className="card w-full">
         <div className="card-body flex flex-row items-center justify-center">
           <div className="text-center">
-            {isLoading ? (<><div className="spinner-simple"></div></>) : (<>   <div className="text-xl font-bold">R{data}</div>
+            {isLoading ? (<><div className="spinner-simple"></div></>) : (<>   <div className="text-xl font-bold">R{display}</div>
               <div className="text-xl font-bold">Balance</div></>)}
 
           </div>
@@ -37,6 +40,5 @@ function CurrentAmount() {
 }
 
 export default CurrentAmount;
-
 
 

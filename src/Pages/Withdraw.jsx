@@ -2,17 +2,20 @@ import { React, useState } from "react";
 import Navbar from "../Components/Navbar";
 import CurrentAmount from "../Components/CurrentAmount";
 import { useContract, useContractWrite } from "@thirdweb-dev/react";
-
+import { walletUser } from "..";
+import { ethers } from 'ethers';
 
 
 function Withdraw() {
-  const [amount, setAmount] = useState(0);
-  const { contract } = useContract("0xEd1CD02Dc4782482c30c59392596151bDFFE904b");
-  const { mutateAsync: withdrawAndBurn, isLoading } = useContractWrite(contract, "withdrawAndBurn")
+  const [zarAmount, setAmount] = useState(0);
+
+  const { contract } = useContract("0xf4386b25Ef558A7EF39961B0C9d558D6eF6BB94F");
+  const { mutateAsync: approve, isLoading } = useContractWrite(contract, "burnFrom")
 
   const call = async () => {
+    const multiply = ethers.utils.parseUnits(zarAmount.toString(), 18);
     try {
-      const data = await withdrawAndBurn({ args: [amount] });
+      const data = await approve({ args: [walletUser, multiply] });
       console.info("contract call successs", data);
     } catch (err) {
       console.error("contract call failure", err);
@@ -27,7 +30,7 @@ function Withdraw() {
       <CurrentAmount />
       <div className="flex items-center justify-center m-4">
         {" "}
-        <input className="input-rounded input py-8" value={amount} placeholder="ZAR(R)" onChange={handleValue} />
+        <input className="input-rounded input py-8" value={zarAmount} placeholder="ZAR(R)" onChange={handleValue} />
         <button className="btn btn-primary ml-2 py-2" onClick={call}>Withdraw</button>
       </div>
     </div>

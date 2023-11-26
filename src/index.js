@@ -11,6 +11,7 @@ import './index.css';
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 
 
+export const walletUser = "0x24F375746fF3f15D12Ec2E929D9f0bD24C5D059D"
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(
