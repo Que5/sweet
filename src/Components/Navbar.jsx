@@ -7,7 +7,7 @@ function Navbar() {
     <div className="navbar">
       <div className="navbar-start">
         <Link to="/" className="navbar-item">
-          Sweet
+          CENTO
         </Link>
       </div>
       <div className="navbar-end"></div>
