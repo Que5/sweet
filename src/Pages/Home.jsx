@@ -19,7 +19,7 @@ function Home() {
 
       <div className="flex justify-center w-full ">
         <div className="btn-group btn-group-rounded btn-group-scrollable flex flex-wrap mt-2">
-          <button className="btn">Send</button>
+          <Link to="/Send" className="btn">Send</Link>
           <Link to="/Receive" className="btn">
             Receive
           </Link>

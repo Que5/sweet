@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
+import { walletUser } from "..";
 
 function Receive() {
   const textRef = useRef(null);
@@ -29,7 +30,7 @@ function Receive() {
         <input
           ref={textRef}
           className="input-rounded input ml-2 py-2" // Adjusted py-2 here
-          value="0x141e7D44439213c935dC645dc3D5BcF5e291aCC6"
+          value={walletUser}
           readOnly
         />
         {copySuccess && <p className="ml-2">{copySuccess}</p>}

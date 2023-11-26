@@ -31,7 +31,9 @@ function Withdraw() {
       <div className="flex items-center justify-center m-4">
         {" "}
         <input className="input-rounded input py-8" value={zarAmount} placeholder="ZAR(R)" onChange={handleValue} />
-        <button className="btn btn-primary ml-2 py-2" onClick={call}>Withdraw</button>
+        <button className="btn btn-primary ml-2 py-2" onClick={call} disabled={isLoading}>
+          {isLoading ? "Loading..." : "Withdraw"}
+        </button>
       </div>
     </div>
   );

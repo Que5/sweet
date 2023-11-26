@@ -25,19 +25,22 @@ function Deposit() {
   }
 
   return (
-    <div className="bg-gradient-to-t from-green-500  to-cyan-400 h-screen">
+    <div className="bg-gradient-to-t from-green-500 to-cyan-400 h-screen">
       <Navbar />
       <CurrentAmount />
       <div className="flex items-center justify-center m-4">
         {" "}
         <input className="input-rounded input py-8" onChange={handleValue} value={zarAmount} placeholder="ZAR(R)" />
-        <button className="btn btn-primary ml-2 py-2" onClick={call}> Deposit</button>
+        <button className="btn btn-primary ml-2 py-2" onClick={call} disabled={isLoading}>
+          {isLoading ? "Loading..." : "Deposit"}
+        </button>
       </div>
     </div>
   );
 }
 
 export default Deposit;
+
 
 
 

@@ -8,6 +8,7 @@ import Withdraw from "./Withdraw";
 import Nfc from "./Nfc";
 import Register from "./Register";
 import PaymentInfo from "./PaymentInfo";
+import Send from "./Send"
 
 import Home from "./Home";
 
@@ -24,6 +25,7 @@ const AppRouter = () => {
         <Route path="/Nfc" element={<Nfc />} />
         <Route path="/Register" element={<Register />} />
         <Route path="/PaymentInfo" element={<PaymentInfo />} />
+        <Route path="/Send" element={<Send />} />
       </Routes>
     </Router>
   );
