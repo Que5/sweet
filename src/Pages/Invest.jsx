@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Invest() {
   return (
-    <div>
+    <div  className="bg-gradient-to-t from-green-500  to-cyan-400 h-screen">
       <Navbar />
       <CurrentAmount />
       <div className="flex w-full justify-center gap-4">

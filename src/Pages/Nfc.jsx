@@ -4,10 +4,10 @@ import Nfcimg from "../img/nfc.gif";
 
 const Nfc = () => {
   return (
-    <div>
+    <div  className="bg-gradient-to-t from-green-500  to-cyan-400 h-screen">
       <Navbar />
       <div className="flex items-center justify-center my-4">
-        <img src={Nfcimg} alt="NFC Image" />
+        <img src={Nfcimg} alt="NFC" />
       </div>
     </div>
   );

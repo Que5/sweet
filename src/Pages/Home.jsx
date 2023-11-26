@@ -10,10 +10,13 @@ import Liquidity from "../Components/Liquidity";
 import { Link } from "react-router-dom";
 
 function Home() {
-  return (
+  return (<>
+
+
     <div className="bg-gradient-to-t from-green-500  to-cyan-400">
       <Navbar />
       <CurrentAmount />
+
       <div className="flex justify-center w-full ">
         <div className="btn-group btn-group-rounded btn-group-scrollable flex flex-wrap mt-2">
           <button className="btn">Send</button>
@@ -36,6 +39,8 @@ function Home() {
       </div>
       {/* {user} */}
     </div>
+
+  </>
   );
 }
 

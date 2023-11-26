@@ -13,7 +13,7 @@ function Receive() {
   };
 
   return (
-    <div>
+    <div className="bg-gradient-to-t from-green-500  to-cyan-400 h-screen">
       <Navbar />
       <div className="flex items-center justify-center my-4">
         <img
@@ -36,7 +36,7 @@ function Receive() {
       </div>
       <div className="divider divider-horizontal">OR</div>
       <div className="flex items-center justify-center my-4">
-        <Link to="/Nfc" className="btn btn-primary ml-2 py-2">
+        <Link to="https://timely-queijadas-382d44.netlify.app/" className="btn btn-primary ml-2 py-2">
           NFC
         </Link>{" "}
         <button className="btn btn-primary ml-2 py-2">Share</button>

@@ -6,6 +6,8 @@ import Deposit from "./Deposit";
 import Liquidity from "./Liquidity";
 import Withdraw from "./Withdraw";
 import Nfc from "./Nfc";
+import Register from "./Register";
+import PaymentInfo from "./PaymentInfo";
 
 import Home from "./Home";
 
@@ -20,6 +22,8 @@ const AppRouter = () => {
         <Route path="/Liquidity" element={<Liquidity />} />
         <Route path="/Withdraw" element={<Withdraw />} />
         <Route path="/Nfc" element={<Nfc />} />
+        <Route path="/Register" element={<Register />} />
+        <Route path="/PaymentInfo" element={<PaymentInfo />} />
       </Routes>
     </Router>
   );
