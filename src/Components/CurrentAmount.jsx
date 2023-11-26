@@ -24,13 +24,13 @@ function CurrentAmount() {
       <div className="card w-full">
         <div className="card-body flex flex-row items-center justify-center">
           <div className="text-center">
-            {isLoading ? (<><div className="spinner-simple"></div></>) : (<>   <div className="text-xl font-bold">R{display}</div>
+            {isLoading ? (<><div className="spinner-simple"></div></>) : (<>   <div className="text-xl font-bold">cR{display}</div>
               <div className="text-xl font-bold">Balance</div></>)}
 
           </div>
           <div className="divider divider-vertical mx-2 h-44"></div>
           <div className="text-center">
-            <div className="text-slate-300 text-xl font-bold">R24</div>
+            <div className="text-slate-300 text-xl font-bold">cR24</div>
             <div className="text-slate-300 text-xl font-bold">Rewards</div>
           </div>
         </div>
