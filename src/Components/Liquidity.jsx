@@ -7,7 +7,7 @@ function Liquidity() {
       to="Liquidity"
       className="card max-w-full items-center justify-center m-3 bg-gray-950 text-white"
     >
-      Liquidity(make me water)
+      Liquidity
     </Link>
   );
 }
