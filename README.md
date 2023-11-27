@@ -17,6 +17,13 @@ Additionally, we are actively working on adding full functionality to Cento, ens
 
 Moreover, we are developing a feature that will enable mapping addresses to cell numbers, providing users with the convenience of using their cell numbers as a payment option. This feature aims to streamline transactions and simplify the payment process.
 
+# Future UI
+
+We plan to integrate an intuitively designed user interface (UI) that prioritizes ease of use. This UI will be crafted with precision, ensuring a professional and seamless experience for our users.
+![](https://github.com/LL-oyiso/figma)
+
+
+
 Starter kit to build with Create React App and thirdweb without additional initial configuration.
 
 # Links
