@@ -20,7 +20,7 @@ Moreover, we are developing a feature that will enable mapping addresses to cell
 # Future UI
 
 We plan to integrate an intuitively designed user interface (UI) that prioritizes ease of use. This UI will be crafted with precision, ensuring a professional and seamless experience for our users.
-![](https://github.com/LL-oyiso/figma/commit/a082b1396f0627771764c9ef8730a81666eb612f)
+![](https://github.com/LL-oyiso/figma/blob/main/Fimga.png)
 
 
 
