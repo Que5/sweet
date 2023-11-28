@@ -23,9 +23,9 @@ export default function Component() {
         < div className="bg-gradient-to-t from-green-500  to-cyan-400 h-screen">
             <Navbar />
             <div className="flex w-full justify-center gap-4">
-
-                <input className="input-rounded input py-8" value={name} onChange={handleUserChange} placeholder="Name" />
-                < className="btn btn-primary ml-2 py-2" ConnectWallet />
+<div><p>Register or login by connecting to your Metamask</p></div>
+              
+                <  ConnectWallet />
               
             </div>
         </div>)
