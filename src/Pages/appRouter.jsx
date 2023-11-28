@@ -16,14 +16,14 @@ const AppRouter = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/Receive" element={<Receive />} />
         <Route path="/Invest" element={<Invest />} />
         <Route path="/Deposit" element={<Deposit />} />
         <Route path="/Liquidity" element={<Liquidity />} />
         <Route path="/Withdraw" element={<Withdraw />} />
         <Route path="/Nfc" element={<Nfc />} />
-        <Route path="/Register" element={<Register />} />
+        <Route path="/" element={<Register />} />
         <Route path="/PaymentInfo" element={<PaymentInfo />} />
         <Route path="/Send" element={<Send />} />
       </Routes>
