@@ -9,7 +9,7 @@ export default function Register() {
 
  useEffect(() => {
    if (wallet) {
-     history.push("/redirect-route");
+     history.push("/home");
    }
  }, [wallet, history]);
 
