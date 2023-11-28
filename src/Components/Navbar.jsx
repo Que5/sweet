@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar-start">
-        <Link to="/" className="navbar-item">
+        <Link to="/home" className="navbar-item">
           CENTO
         </Link>
       </div>
