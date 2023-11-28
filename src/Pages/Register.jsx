@@ -1,4 +1,4 @@
-
+import { ConnectWallet } from "@thirdweb-dev/react";
 import { useState } from "react";
 import Navbar from "../Components/Navbar"
 import { useContract, useContractWrite } from "@thirdweb-dev/react";
@@ -25,7 +25,8 @@ export default function Component() {
             <div className="flex w-full justify-center gap-4">
 
                 <input className="input-rounded input py-8" value={name} onChange={handleUserChange} placeholder="Name" />
-                <button className="btn btn-primary ml-2 py-2" onClick={call}>Register</button>
+                < className="btn btn-primary ml-2 py-2" ConnectWallet />
+              
             </div>
         </div>)
 }
