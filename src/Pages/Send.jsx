@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
-import { walletUser } from "..";
+
 import { ethers } from 'ethers';
-import { useContract, useContractWrite } from "@thirdweb-dev/react";
+import { useContract, useContractWrite,useAddress } from "@thirdweb-dev/react";
 
 function Receive() {
   const [zarAmount, setAmount] = useState(0);
-
+  const walletUser = useAddress()
   const { contract } = useContract("0xf4386b25Ef558A7EF39961B0C9d558D6eF6BB94F");
   const { mutateAsync: approve, isLoading } = useContractWrite(contract, "burnFrom")
 

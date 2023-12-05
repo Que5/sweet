@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
 import CurrentAmount from "../Components/CurrentAmount";
-import { useContract, useContractWrite } from "@thirdweb-dev/react";
-import { walletUser } from "..";
+import { useContract, useContractWrite,useAddress } from "@thirdweb-dev/react";
+
 import { ethers } from 'ethers';
 
 function Deposit() {
   const [zarAmount, setZarAmount] = useState(0);
-
+  const walletUser = useAddress();
   const { contract } = useContract("0xf4386b25Ef558A7EF39961B0C9d558D6eF6BB94F");
   const { mutateAsync: approve, isLoading } = useContractWrite(contract, "mint")
 

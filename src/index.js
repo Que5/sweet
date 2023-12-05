@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import { ThirdwebProvider,useAddress } from "@thirdweb-dev/react";
+import { ThirdwebProvider } from "@thirdweb-dev/react";
 import { CeloAlfajoresTestnet } from "@thirdweb-dev/chains";
 import './index.css';
 
@@ -12,7 +12,7 @@ import './index.css';
 // You can also import additional chains from `@thirdweb-dev/chains` and pass them directly.
 
 
-export const walletUser = useAddress();
+
 
 
 const container = document.getElementById("root");

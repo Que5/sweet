@@ -1,9 +1,10 @@
 import React, { useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
-import { walletUser } from "..";
+import { useAddress } from "@thirdweb-dev/react";
 
 function Receive() {
+  const walletUser = useAddress();
   const textRef = useRef(null);
   const [copySuccess, setCopySuccess] = useState(null);
 
