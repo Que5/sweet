@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Components/Navbar";
-import { Link } from "react-router-dom";
+
 
 import { ethers } from 'ethers';
 import { useContract, useContractWrite,useAddress } from "@thirdweb-dev/react";
