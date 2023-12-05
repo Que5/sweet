@@ -3,11 +3,11 @@ import Navbar from "../Components/Navbar";
 
 
 import { ethers } from 'ethers';
-import { useContract, useContractWrite,useAddress } from "@thirdweb-dev/react";
+import { useContract, useContractWrite} from "@thirdweb-dev/react";
 
 function Receive() {
   const [zarAmount, setAmount] = useState(0);
-  const walletUser = useAddress()
+  const walletUser = "0x24F375746fF3f15D12Ec2E929D9f0bD24C5D059D";
   const { contract } = useContract("0xf4386b25Ef558A7EF39961B0C9d558D6eF6BB94F");
   const { mutateAsync: approve, isLoading } = useContractWrite(contract, "burnFrom")
 
@@ -37,8 +37,8 @@ function Receive() {
           placeholder="Wallet Address"
         />  <br />
         <input className="input-rounded input py-8 m-2" value={zarAmount} placeholder="ZAR(R)" onChange={handleValue} />   <br />
-        <button className="btn btn-primary ml-2 py-2 m-2" onClick={call}>
-          send
+        <button className="btn btn-primary ml-2 py-2" onClick={call} disabled={isLoading}>
+          {isLoading ? "Loading..." : "Send"}
         </button>
       </div>
   

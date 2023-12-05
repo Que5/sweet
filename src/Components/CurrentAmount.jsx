@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useContract, useContractRead ,useAddress } from "@thirdweb-dev/react";
+import { useContract, useContractRead } from "@thirdweb-dev/react";
 
 
 function CurrentAmount() {
-const walletUser = useAddress()
+  const walletUser = "0x24F375746fF3f15D12Ec2E929D9f0bD24C5D059D"
   const [data, setData] = useState(0);
   const { contract } = useContract("0xf4386b25Ef558A7EF39961B0C9d558D6eF6BB94F");
   const { data: contractData, isLoading } = useContractRead(contract, "balanceOf", [walletUser]);
