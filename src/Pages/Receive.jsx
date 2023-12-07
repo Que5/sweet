@@ -1,10 +1,10 @@
 import React, { useRef, useState } from "react";
 import Navbar from "../Components/Navbar";
 import { Link } from "react-router-dom";
-// import { useAddress } from "@thirdweb-dev/react";
+import { useAddress } from "@thirdweb-dev/react";
 
 function Receive() {
-  const walletUser = "0x24F375746fF3f15D12Ec2E929D9f0bD24C5D059D";
+  const walletUser = useAddress();
   const textRef = useRef(null);
   const [copySuccess, setCopySuccess] = useState(null);
 
@@ -38,7 +38,10 @@ function Receive() {
       </div>
       <div className="divider divider-horizontal">OR</div>
       <div className="flex items-center justify-center my-4">
-        <Link to="https://timely-queijadas-382d44.netlify.app/" className="btn btn-primary ml-2 py-2">
+        <Link
+          to="https://timely-queijadas-382d44.netlify.app/"
+          className="btn btn-primary ml-2 py-2"
+        >
           NFC
         </Link>{" "}
         <button className="btn btn-primary ml-2 py-2">Share</button>
