@@ -3,6 +3,7 @@ import { useContract, useContractRead } from "@thirdweb-dev/react";
 
 function Swap() {
   const [data, setData] = useState(0);
+  const [showData, setShowData] = useState(false);
   const { contract } = useContract(
     "0xEd1CD02Dc4782482c30c59392596151bDFFE904b"
   );
@@ -16,6 +17,7 @@ function Swap() {
     if (!isLoading && contractData) {
       const newData = contractData.toString();
       setData(newData);
+      setShowData(true);
     }
   }, [isLoading, contractData]);
 
@@ -25,8 +27,9 @@ function Swap() {
       <button className="btn btn-primary ml-2 py-2">Swap</button>
       <input className="input-rounded input ml-2 py-8" placeholder="USD($)" />
       <br />
-      {isLoading ? <p>Loading...</p> : <p>Contract Data: {data}</p>}
+      {showData ? <p>Contract Data: {data}</p> : <p>Loading...</p>}
     </div>
   );
 }
+
 export default Swap;

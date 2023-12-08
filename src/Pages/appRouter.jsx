@@ -8,7 +8,7 @@ import Withdraw from "./Withdraw";
 import Nfc from "./Nfc";
 import Register from "./Register";
 import PaymentInfo from "./PaymentInfo";
-import Send from "./Send"
+import Send from "./Send";
 
 import Home from "./Home";
 
