@@ -54,7 +54,7 @@ function Register() {
           </button>
         )}
 
-        <pre className="mt-4">Connected Wallet: {address}</pre>
+        <pre className="mt-4 flex-wrap">Connected Wallet: {address}</pre>
       </div>
     </div>
   );
